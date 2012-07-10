@@ -1,0 +1,9 @@
+{% if listofnames  %}
+    <ul>
+    {% for Student.id in listofnames %}
+        <li><a href="views.py"></a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Students are in the List.</p>
+{% endif %}
