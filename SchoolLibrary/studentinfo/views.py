@@ -15,3 +15,11 @@ def listofnames(request):
   	})
     	return HttpResponse(t.render(c))
 
+
+def individual_student(request, studentinfo_id):
+    for i in listofnames(Student):
+
+        return HttpResponse("This is %s."% Student.print_sentence(Student.name))
+
+
+

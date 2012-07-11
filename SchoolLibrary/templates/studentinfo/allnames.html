@@ -1,9 +1,13 @@
-{% if listofnames  %}
+{% if all_students  %}
     <ul>
-    {% for Student.id in listofnames %}
-        <li><a href="views.py"></a></li>
+    {% for Student in all_students %}
+        <li><a href="/studentinfo/{{ Student.id }}/">{{ Student.name }}</a></li>
+
     {% endfor %}
     </ul>
 {% else %}
     <p>No Students are in the List.</p>
 {% endif %}
+
+
+

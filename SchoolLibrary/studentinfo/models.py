@@ -10,8 +10,9 @@ class Student(models.Model):
 	
 	grade = models.CharField(max_length=255)
 	
-	
-	
+	def print_sentence(self, name, school, grade):
+            return "The student %s goes to %s and is in %s"(self.name, self.school, self.grade)
+
 	def __unicode__(self):
 		return self.name
 	

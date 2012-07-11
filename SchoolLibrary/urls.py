@@ -5,7 +5,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     
     url(r'^allstudents/$', 'studentinfo.views.listofnames', name = 'All Students'),
-    #url(r'^index/$', 'studentinfo.views. ),
+    url(r'^studentinfo/(?P<studentinfo_id>\d+)/$', 'studentinfo.views.individual_student' ),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
