@@ -1,6 +1,8 @@
 from studentinfo.models import Student
+from studentinfo.models import Libraries
 from django.template import Context, loader
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 	
@@ -28,4 +30,14 @@ def individual_student(request, studentinfo_id):
         #I still need to make a template to display the sentence,
         # the return above is just to test that it works.
 
+
+def homepage(request):
+
+    all_libraries = Libraries.objects.all()
+    l = loader.get_template('studentinfo/homepage.html')
+    con = Context({
+        'all_libraries': all_libraries
+    })
+
+    return HttpResponse(l.render(con))
 
